@@ -12,7 +12,10 @@ app.use(cors());
 app.use(express.json());
 app.use('/tasks', taskRoutes);
 // Connect to MongoDB (replace with your connection string)
-mongoose.connect('mongodb://localhost:27017/taskmanager', {
+
+
+//mongoose.connect('mongodb://localhost:27017/taskmanager', {
+ mongoose.connect('process.env.MONGODB_URI || 'mongodb://localhost:27017/taskmanager'', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
