@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TaskItem from './TaskItem';
 
-const API_URL = 'https://task-manager-app-askn.onrender.com/tasks';
+const API_URL = 'https://task-manager-app-askn.onrender.com';
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
