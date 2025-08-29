@@ -14,8 +14,9 @@ app.use(express.json());
 app.use('/tasks', taskRoutes);
 
 // Connect to MongoDB (replace with your connection string)
-mongoose.connect('mongodb://localhost:27017/taskmanager', {
-  useNewUrlParser: true,
+//mongoose.connect('mongodb://localhost:27017/taskmanager', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://jremail2002_db_user:1iWRjNv2bAZ63xkl@cluster0.ii7oj6t.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {  
+useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 .then(() => console.log('Connected to MongoDB'))
