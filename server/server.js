@@ -4,6 +4,12 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const taskRoutes = require('./routes/tasks');
 
+const corsOptions = {
+  origin: 'task-manager-app-gamma-flax.vercel.app' // <-- REPLACE WITH YOUR VERCEL URL
+};
+
+
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
