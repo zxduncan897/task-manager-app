@@ -5,7 +5,7 @@ const cors = require('cors');
 const taskRoutes = require('./routes/tasks');
 
 const corsOptions = {
-  origin: 'task-manager-app-gamma-flax.vercel.app' // <-- REPLACE WITH YOUR VERCEL URL
+  origin: 'https://task-manager-app-gamma-flax.vercel.app' 
 };
 
 
